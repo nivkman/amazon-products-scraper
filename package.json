@@ -1,0 +1,29 @@
+{
+    "name": "amazon-products-scraper",
+    "version": "1.0.0",
+    "description": "Simple Amazon products scraper API",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nivkman/amazon-products-scraper.git"
+    },
+    "keywords": [
+        "scraper",
+        "amazon",
+        "products"
+    ],
+    "author": "Niv Kaufman",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nivkman/amazon-products-scraper/issues"
+    },
+    "homepage": "https://github.com/nivkman/amazon-products-scraper#readme",
+    "dependencies": {
+        "express": "^4.18.1",
+        "nodemon": "^2.0.19"
+    }
+}
