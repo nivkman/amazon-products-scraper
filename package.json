@@ -2,9 +2,10 @@
     "name": "amazon-products-scraper",
     "version": "1.0.0",
     "description": "Simple Amazon products scraper API",
-    "main": "index.js",
+    "main": "src/index.js",
     "type": "module",
     "scripts": {
+        "start": "src/index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
