@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-const openBrowser = async(cookie) => {
+const openBrowser = async() => {
     try {
         const browser = await puppeteer.launch({
             headless: true,
@@ -15,14 +15,6 @@ const openBrowser = async(cookie) => {
         const page = await browser.newPage();
         await page.setDefaultNavigationTimeout(0);
         await page.setViewport({ width: 1366, height: 5000 });
-
-        if (cookie != null)
-            await page.setCookie({
-                'name': 'li_at',
-                'value': cookie,
-                'domain': '.www.linkedin.com'
-            })
-
         return [browser, page];
     } catch (err) {
         return err;
