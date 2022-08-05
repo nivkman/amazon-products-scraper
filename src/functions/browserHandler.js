@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 const openBrowser = async() => {
     try {
         const browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
             pipe: true,
             executablePath: '/usr/bin/google-chrome',
             args: [
@@ -67,4 +67,4 @@ const removeHtmlElement = async(page, elm) => {
     }, elm)
 }
 
-module.exports = { openBrowser, closeBrowser, sleep, scrollDown, removeHtmlElement };
+export { openBrowser, closeBrowser, sleep, scrollDown, removeHtmlElement };
