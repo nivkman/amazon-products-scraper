@@ -1,10 +1,10 @@
-import express from 'express';
-import scrapeController from '../functions/scrape';
+const express = require('express');
+const scrapeController = require('../functions/scrape');
 const router = express();
 
 router.post('/scrape', async(req, res) => {
-    await scrapeController();
+    await scrapeController("https://amazon.com");
     res.json({ status: "running" });
 })
 
-export default router;
+module.exports = router;

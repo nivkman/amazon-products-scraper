@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+const puppeteer = require('puppeteer');
 
 const openBrowser = async() => {
     try {
@@ -67,4 +67,4 @@ const removeHtmlElement = async(page, elm) => {
     }, elm)
 }
 
-export { openBrowser, closeBrowser, sleep, scrollDown, removeHtmlElement };
+module.exports = { openBrowser, closeBrowser, sleep, scrollDown, removeHtmlElement };

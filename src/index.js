@@ -1,6 +1,5 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import router from './routers/v1.js';
+const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -11,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.use('/api/v1', router);
+app.use('/api/v1', require('./routers/v1.js'));
 
 app.listen(PORT, () => {
     console.log(`server is running on port ${PORT}`)
