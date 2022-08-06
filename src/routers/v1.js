@@ -3,8 +3,7 @@ import scrapeController from '../functions/scrape';
 const router = express();
 
 router.post('/scrape', async(req, res) => {
-    const [searchURL, regionZipCode, limit] = await req.body;
-    await scrapeController(searchURL, regionZipCode, limit);
+    await scrapeController();
     res.json({ status: "running" });
 })
 
